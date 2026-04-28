@@ -1,73 +1,73 @@
 # Background Remover
 
- Стильний та швидкий сервіс для **видалення фону з фото**.  
-Фронтенд на **React**, бекенд на **FastAPI**, використовується **Rembg** для обробки зображень.
+ A stylish and fast service for **removing backgrounds from photos**.  
+Frontend built with **React**, backend built with **FastAPI**, using **Rembg** for image processing.
 
 ---
 
-## Функціонал
+## Features
 
-- Завантаження фото через інтерфейс.
-- Попередній перегляд оригінального зображення.
-- Видалення фону та відображення результату.
-- Скачування обробленого зображення.
-- Перевірка стану бекенду через `/health`.
+- Upload photos via the interface.
+- Preview the original image.
+- Remove the background and view the result.
+- Download the processed image.
+- Check the backend status via `/health`.
 
 ---
 
-## Технології
+## Technologies
 
 ### Frontend
 
 - React + Hooks
-- CSS glassmorphism + відео з блюром на фоні
-- Сучасний та комфортний UI/UX
+- CSS glassmorphism + blurred background video
+- Modern and user-friendly UI/UX
 
 ### Backend
 
 - Python 3.11+
 - FastAPI
-- rembg (для видалення фону)
-- Pillow (для роботи із зображеннями)
-- CORS middleware для роботи з фронтендом
-- Uvicorn (ASGI сервер)
+- rembg (for background removal)
+- Pillow (for image processing)
+- CORS middleware for frontend integration
+- Uvicorn (ASGI server)
 
 ---
 
-## Як запустити проект
+## How to launch a project
 ### Backend (FastAPI)
  ```bash
 git clone <URL_REPOSITORY>
 cd background-remover
 cd backend
-# Створення віртуального середовища
+# Creating a virtual environment
 python -m venv env
 
-# Активація (Windows)
+# Activation (Windows)
 source env/Scripts/activate
 
-# Встановлення залежностей
+# Installing dependencies
 pip install fastapi uvicorn rembg pillow
 ```
-Запуск сервера:
+Starting the server:
 ```bash
 python -m uvicorn api.main:app --reload
 ```
 
 ### Frontend (React)
 
-Перейдіть у папку фронтенду:
+Go to the frontend folder:
 
 ```cd frontend```
 
 
-Встановіть залежності:
+Set up the dependencies:
 
 ```npm install```
 
 
-Запустіть локально:
+Run locally:
 
 ```npm run dev```
 
-Переконайтесь, що API в App.jsx вказує на бекенд
+Make sure the API in App.jsx points to the backend
